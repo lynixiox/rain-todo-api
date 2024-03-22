@@ -1,14 +1,13 @@
 package com.rain.todo;
 
+import com.rain.todo.entity.ToDo;
+import com.rain.todo.repository.ToDoRepositry;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
-import org.springframework.data.mongodb.core.query.Criteria;
-import org.springframework.data.mongodb.core.query.Query;
 
 import java.time.LocalDateTime;
-import java.time.ZonedDateTime;
 
 @SpringBootApplication
 public class TodoApplication {
@@ -24,7 +23,7 @@ public class TodoApplication {
 		return args -> {
 			ToDo toDo = new ToDo(
 					"Do Homework",
-					"Need to finish the math homework",
+					ToDo.Status.TODO,
 					LocalDateTime.now()
 			);
 			repositry.insert(toDo);
