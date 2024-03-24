@@ -8,6 +8,6 @@ public interface TodoService {
 
     List<TodoDto> getAllTodos();
     TodoDto createTodo(TodoDto todoDto);
-
+    TodoDto updateTodo(TodoDto todoDto);
 
 }

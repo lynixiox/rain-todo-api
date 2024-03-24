@@ -16,21 +16,4 @@ public class TodoApplication {
 		SpringApplication.run(TodoApplication.class, args);
 	}
 
-
-	@Bean
-	CommandLineRunner runner(ToDoRepositry repositry){
-
-		return args -> {
-			ToDo toDo = new ToDo(
-					"Do Homework",
-					ToDo.Status.TODO,
-					LocalDateTime.now()
-			);
-			repositry.insert(toDo);
-
-
-		};
-
-	}
-
 }

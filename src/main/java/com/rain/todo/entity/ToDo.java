@@ -17,7 +17,7 @@ public class ToDo {
 
     public enum Status{
         TODO,
-        Completed,
+        COMPLETED,
         IN_PROGRESS
 
     }
