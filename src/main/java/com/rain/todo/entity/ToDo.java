@@ -66,6 +66,14 @@ public class ToDo {
         return Objects.hash(title, status, created);
     }
 
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
     public void setStatus(Status status) {
         this.status = status;
     }

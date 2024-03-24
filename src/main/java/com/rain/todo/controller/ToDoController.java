@@ -31,6 +31,12 @@ public class ToDoController {
         System.out.println(todoDto);
         return new ResponseEntity<>(todoService.createTodo(todoDto),HttpStatus.CREATED);
     }
+
+    @PostMapping("/update/{id}")
+    @CrossOrigin("*")
+    public ResponseEntity<TodoDto> updateTask(@RequestBody TodoDto todoDto){
+        System.out.println(todoDto);
+    }
 }
 
 

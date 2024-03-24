@@ -33,8 +33,14 @@ public class TodoServiceImpl implements TodoService{
         return mapToDto(toDo);
     }
 
+    public TodoDto updateTodo(TodoDto todoDto){
+        ToDo todo = toDoRepositry.save(mapToEntity(todoDto));
+        return mapToDto(todo);
+    }
+
     private TodoDto mapToDto(ToDo todo){
         TodoDto todoDto = new TodoDto();
+        todoDto.setId(todo.getId());
         todoDto.setTitle(todo.getTitle());
         todoDto.setStatus(todo.getStatus());
 
@@ -43,6 +49,7 @@ public class TodoServiceImpl implements TodoService{
 
     private ToDo mapToEntity(TodoDto todoDto){
         ToDo todo = new ToDo();
+        todo.setId(todoDto.getId());
         todo.setTitle(todoDto.getTitle());
         todo.setStatus(todoDto.getStatus());
 
