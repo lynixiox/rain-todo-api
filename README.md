@@ -7,3 +7,5 @@ cd into root directory of the project and run the following to execute the `dock
 docker-compose up
 ```
 you can access `mongo-express` on `localhost:8081` with default credentials `admin:pass`
+
+### ENV Setup
